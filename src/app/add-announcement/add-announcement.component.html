@@ -1,0 +1,35 @@
+<div class="forms">
+    <form>
+        <mat-form-field class="inputText" appearance="fill">
+            <mat-label class="label">Title</mat-label>
+            <input matInput type="text" [(ngModel)]="formTitle" name="formTitle">
+          </mat-form-field>
+
+          <mat-form-field class="inputText" appearance="fill">
+            <mat-label class="label">Author</mat-label>
+            <input matInput type="text" [(ngModel)]="formAuthor" name="formAuthor">
+          </mat-form-field>
+
+          <mat-form-field class="inputText" appearance="fill">
+            <mat-label class="label">Message</mat-label>
+            <input matInput type="text" [(ngModel)]="formMessage" name="formMessage">
+          </mat-form-field>
+
+          <mat-form-field class="inputText" appearance="fill">
+            <mat-label class="label">Image</mat-label>
+            <input matInput type="text" [(ngModel)]="formImage" name="formImage">
+          </mat-form-field>
+
+          <mat-form-field class="inputCategory" appearance="fill" >
+            <mat-label>Choose Category</mat-label>
+            <mat-select [(ngModel)]="formCategory" name="formCategory">
+             <mat-option *ngFor="let category of categories" [value]="category">
+              {{category}}
+             </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button class="addButton" routerLink="/home" mat-raised-button (click)="addAnnouncement()">Add Announcement</button>
+    </form>
+    <button class="cancelButton" routerLink="/home">CANCEL</button>
+</div>

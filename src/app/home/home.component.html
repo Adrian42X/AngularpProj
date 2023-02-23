@@ -1,0 +1,13 @@
+<div class="app-container">
+    <app-categories (selectedCategoryEmitter)="changeCategory($event)"> </app-categories>
+    <p>
+      {{notificationMessage}}
+     </p>
+    <div *ngFor="let item of filterAnnouncement" class="announcements">
+ <app-announcement [announc]="item"></app-announcement>
+ </div>
+ <div>
+   <button routerLink="/add"> Add Announcement</button>
+ </div>
+ </div>
+ 
